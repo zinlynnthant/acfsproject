@@ -1,0 +1,275 @@
+/* Reset and basic styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8; /* Light blue-gray */
+  color: #333;
+  font-size: 16px;
+}
+
+header {
+  background-color: #4a90e2; /* Vivid blue */
+  color: #fff;
+  padding: 10px 20px;
+  height: 100px;
+
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-brand {
+  padding: 15px;
+  color: #fff;
+  font-size: 1.5rem; /* Adjust font size for branding */
+}
+
+.navbar-toggler {
+  border: none; /* Remove border from the toggler */
+}
+
+.navbar-nav {
+  margin-left: auto; /* Align nav items to the right */
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 10px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #dfe6ec; /* Light gray */
+}
+
+.btnlogin:hover {
+  text-decoration: none;
+  color: white;
+}
+.btnlogin {
+  background-color: #071246; /* Blue background */
+  color: #fff; /* White text */
+  border-radius: 10%; /* Circular border radius */
+  padding: 10px 20px; /* Adjust padding as needed */
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 20px;
+  min-width: 280px;
+}
+
+.hero-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 40px 20px;
+}
+
+.metric-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.metric-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #4a90e2;
+}
+
+.metric-content h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.metric-content p {
+  font-size: 24px;
+  margin: 0;
+}
+
+footer {
+  background-color: #4a90e2;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 20px;
+    background: #17c0c0;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 955px) {
+  .hero-image {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 20px;
+    background: #17c0c0;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+}
+
+/* Review Section Styles */
+.review-section {
+  background-color: #f0f8ff; /* Pale blue background */
+  padding: 60px 40px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #4682b4; /* Pale blue text color */
+}
+
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.review-item {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.student-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4682b4;
+  margin-bottom: 16px;
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.student-id {
+  font-size: 14px;
+  color: #808080; /* Gray color for student ID */
+  text-align: right;
+}
+
+.metric-card {
+  transition: transform 0.3s ease;
+}
+
+.metric-card.animate {
+  transform: scale(1.1);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.metric-card.bounce {
+  animation: bounce 1s;
+}

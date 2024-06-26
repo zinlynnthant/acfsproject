@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Resources</title>
+    <link rel="stylesheet" href="resources.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        header { background-color: #add8e6; padding: 20px; text-align: center; color: white; }
+        h1 { margin: 0; }
+        section { margin: 20px; padding: 20px; background-color: #f1f1f1; border-radius: 8px; }
+        .dropdown-btn { background-color: #add8e6; color: white; padding: 10px; border: none; cursor: pointer; width: 100%; text-align: left; outline: none; }
+        .dropdown-content { display: none; background-color: white; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); padding: 0; border-radius: 8px; margin-top: 8px; }
+        .dropdown-content a { color: black; padding: 10px; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #ddd; }
+        .show { display: block; }
+        #pdf-viewer, #audio-player { display: none; background-color: white; padding: 20px; margin-top: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        #pdf-viewer h2, #audio-player h2 { color: #add8e6; }
+        button { background-color: #add8e6; color: white; padding: 10px 20px; border: none; cursor: pointer; margin-top: 20px; border-radius: 4px; }
+        #pdf-container { width: 100%; height: 600px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Curriculum & Learning Resources</h1>
+    </header>
+
+    <section id="curriculum">
+        <h2>G12 Curriculum</h2>
+        <div class="grade-dropdown">
+            <button class="dropdown-btn">Grade 12</button>
+            <div class="dropdown-content">
+                <ul>
+                    <li>
+                        <button class="dropdown-btn">Textbooks</button>
+                        <ul class="dropdown-content">
+                            <li><a href="#" onclick="showPDF('./assets/People Graphics for Website.pdf')">Algebra II PDF</a></li>
+                            <li><a href="#" onclick="showPDF('path/to/geometry.pdf')">Geometry PDF</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="dropdown-btn">Audiobooks</button>
+                        <ul class="dropdown-content">
+                            <li><a href="#" onclick="showAudio('path/to/algebra-ii.mp3')">Algebra II Audio</a></li>
+                            <li><a href="#" onclick="showAudio('path/to/geometry.mp3')">Geometry Audio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="pdf-viewer">
+        <h2>PDF Viewer</h2>
+        <embed id="pdf-embed" src="" type="application/pdf" width="100%" height="600px" />
+        <button onclick="closeViewer()">Close</button>
+    </section>
+
+    <section id="audio-player">
+        <h2>Audio Player</h2>
+        <audio id="audio-control" controls>
+            <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button onclick="closePlayer()">Close</button>
+    </section>
+
+    <script>
+        // JavaScript to toggle dropdown content
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const dropdownContent = button.nextElementSibling;
+                dropdownContent.classList.toggle("show");
+            });
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener("click", event => {
+            if (!event.target.matches(".dropdown-btn")) {
+                document.querySelectorAll(".dropdown-content").forEach(content => {
+                    content.classList.remove("show");
+                });
+            }
+        });
+
+        function showPDF(filePath) {
+            console.log("Showing PDF:", filePath); // Debug log
+            document.getElementById("pdf-embed").src = filePath;
+            document.getElementById("pdf-viewer").style.display = "block";
+            document.getElementById("audio-player").style.display = "none";
+        }
+
+        function showAudio(filePath) {
+            console.log("Showing Audio:", filePath); // Debug log
+            document.getElementById("audio-control").src = filePath;
+            document.getElementById("audio-player").style.display = "block";
+            document.getElementById("pdf-viewer").style.display = "none";
+        }
+
+        function closeViewer() {
+            document.getElementById("pdf-viewer").style.display = "none";
+        }
+
+        function closePlayer() {
+            document.getElementById("audio-player").style.display = "none";
+        }
+    </script>
+</body>
+</html>

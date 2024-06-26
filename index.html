@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Committee Board (ACFS)</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="#">Student Committee Board</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="resources.html"
+                ><i class="fas fa-book"></i>Learning Resources</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="college.html"
+                ><i class="fas fa-university"></i>College Preparation</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="showcase.html"
+                ><i class="fas fa-lightbulb"></i>Student Creativity Showcase</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="community.html"
+                ><i class="fas fa-users"></i>Community Collaboration</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html"
+                ><i class="fas fa-info-circle"></i>About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="btnlogin" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Welcome to Student Committee Board (ACFS)</h2>
+          <p>Discover the latest updates and statistics about our school.</p>
+          <a href="https://www.academyfs.org" class="cta">Explore Now</a>
+        </div>
+        <div class="hero-image">
+          <img src="./assets/scblogo.png" alt="High School Students" />
+        </div>
+      </section>
+
+      <section class="metrics">
+        <div class="metric-card" onclick="animateMetric(this)">
+          <div class="metric-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <div class="metric-content">
+            <h3>Students</h3>
+            <p id="student-count" class="count-up" data-count="2500">
+              Above 6000
+            </p>
+          </div>
+        </div>
+        <div class="metric-card" onclick="animateMetric(this)">
+          <div class="metric-icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div class="metric-content">
+            <h3>Instructors</h3>
+            <p id="instructor-count" class="count-up" data-count="180">300+</p>
+          </div>
+        </div>
+        <div class="metric-card" onclick="animateMetric(this)">
+          <div class="metric-icon">
+            <i class="fas fa-sitemap"></i>
+          </div>
+          <div class="metric-content">
+            <h3>Departments</h3>
+            <p id="department-count" class="count-up" data-count="16">16</p>
+          </div>
+        </div>
+        <div class="metric-card" onclick="animateMetric(this)">
+          <div class="metric-icon">
+            <i class="fas fa-sort-numeric-down"></i>
+          </div>
+          <div class="metric-content">
+            <h3>Batch</h3>
+            <p id="batch-count" class="count-up" data-count="25">3</p>
+          </div>
+        </div>
+        <div class="metric-card" onclick="animateMetric(this)">
+          <div class="metric-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="metric-content">
+            <h3>Academic Year</h3>
+            <p id="academic-year-count" class="count-up" data-count="10">3</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="review-section">
+      <h2 class="section-title">What Our Students Say</h2>
+      <div class="review-list">
+        <div class="review-item">
+          <h3 class="student-name">202204420</h3>
+          <p class="review-text">
+            The course was excellent, and the instructor's teaching style was
+            engaging and informative. I learned a lot and would highly recommend
+            this program.
+          </p>
+          <p class="student-id">- G12, B2, Room-8, 2024-25 Academic Year</p>
+          <p class="student-id">- G11, B2, Room-9, 2023-24 Academic Year</p>
+          <p class="student-id">- G10, B2, Alpha-3, 2022-23 Academic Year</p>
+        </div>
+        <div class="review-item">
+          <h3 class="student-name">202204424</h3>
+          <p class="review-text">
+            ဒီကျောင်းတက်ရတာတော့ တကယ်ကို အဆင်ပြေပါတယ်။ ဒီကျောင်းတက်ပြီးမှ Skill
+            တွေတိုးတက်လာတာလည်း ရှိပါတယ်။ ဥပမာ အဖွဲ့လိုက်လုပ်ဆောင်ချက်တွေ၊
+            presentation တင်ပြမှုတွေ၊ video edit၊ social skill တွေ စသဖြင့်
+            တိုးတက်လာပါတယ်။ နိုင်ငံရေး အခြေအနေကြောင့် ဒီကျောင်းမှာဆက်တက်နေရတာကို
+            ဂုဏ်ယူပါတယ်။
+          </p>
+          <p class="student-id">- G12, B2, Room-2, 2024-25 Academic Year</p>
+          <p class="student-id">- G11, B2, Room-9, 2023-24 Academic Year</p>
+          <p class="student-id">- G10, B2, Alpha-3, 2022-21 Academic Year</p>
+        </div>
+        <div class="review-item">
+          <h3 class="student-name">2023001570</h3>
+          <p class="review-text">
+            When I was in G-11, I thought that ICT is a bit boring as we there
+            were just pizzles and tiny cartoons. But in G-12, Tr Michi Torea
+            teaches us with oxford uni course and I found out that ICT isn't
+            boring anymore. The reasons are many. I can know the structures of
+            computer systematically. I have to do many group activities in class
+            which are really fun. I really want to say "Thank you ACFS for
+            providing us more knowledgeable than before".
+          </p>
+          <p class="student-id">- G12, B2, Room-8, 2024-25 Academic Year</p>
+          <p class="student-id">- G11, B2, Room-10, 2023-24 Academic Year</p>
+        </div>
+        <div class="review-item">
+          <h3 class="student-name">2023000118</h3>
+          <p class="review-text">
+            ICT time has not been boring since G11.The reason is that playing
+            games and solving problems together was fun. With the arrival of the
+            G12, things have changed a bit, not just in gaming. Techel Michi
+            talks interestingly about computers. It is fun to ask them to play a
+            related game. I would like to say thank you to ACFS for teaching
+            useful subjects like ICT in addition to teaching time.
+          </p>
+          <p class="student-id">- G12, B2, Room-8, 2024-25 Academic Year</p>
+          <p class="student-id">- G11, B1, Room-8, 2023-24 Academic Year</p>
+        </div>
+        <div class="review-item">
+          <h3 class="student-name">202204341</h3>
+          <p class="review-text">
+            onlineကဆိုပေမယ့်လည်း အပြင်မှာသင်ရတာထက် အချိန်ကုန်လူကုန်သက်သာတယ်
+            ictဆိုရင်တောင်အရင်အပြင်ကျောင်းတွေမှာမသင်ခဲ့ရတာတွေ ပြန်သင်ရတယ်
+            စာနားမလည်လို့ ခုlineပေါ်ကရှာတာတွေ presentation
+            တွေလုပ်ရင်းနဲ့နားလည်လာတယ် အရင်လိုကျက်စနစ်မျိုးမဟုတ်ဘဲဆရာ
+            ဆရာမတွေနဲ့သဘောထားချင်းလဲလှယ်လို့ရတယ် ပြီးတော့ MS Teams
+            နဲ့သင်တာဆိုတော့လုံခြုံရေး ‌အတွက်ကောင်းတာပါပဲ
+          </p>
+          <p class="student-id">- G12, B2, Room-7, 2024-25 Academic Year</p>
+          <p class="student-id">- G11, B2, Room-9, 2023-24 Academic Year</p>
+          <p class="student-id">- G10, B2, Alpha-2, 2022-23 Academic Year</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Academy Federal School. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script>
+      function animateMetric(element) {
+        element.classList.add("bounce");
+        setTimeout(() => {
+          element.classList.remove("bounce");
+        }, 1000); // Duration of the bounce animation
+      }
+    </script>
+  </body>
+</html>

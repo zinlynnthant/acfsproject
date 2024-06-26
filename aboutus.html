@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #e9f7fe;
+      }
+
+      header {
+        background-color: #4a90e2; /* Vivid blue */
+        color: #fff;
+        padding: 10px 20px;
+        height: 100px;
+        position: fixed; /* Make header fixed */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Ensure header is above other elements */
+      }
+
+      .navbar-logo {
+        color: white;
+        font-weight: bold;
+        font: 200;
+        text-align: center;
+      }
+      .nav-link {
+        color: white !important;
+        margin-right: 10px;
+      }
+
+      .btnlogin:hover {
+        text-decoration: none;
+        color: white;
+      }
+      .btnlogin {
+        background-color: #071246; /* Blue background */
+        color: #fff; /* White text */
+        border-radius: 10%; /* Circular border radius */
+        padding: 10px 20px; /* Adjust padding as needed */
+        text-align: center;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+      }
+
+      @media (max-width: 768px) {
+        .navbar-nav {
+          flex-direction: column;
+          margin-top: 20px;
+          background: #17c0c0;
+        }
+
+        .navbar-nav .nav-item {
+          margin: 10px 0;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 955px) {
+        .navbar-nav {
+          flex-direction: column;
+          margin-top: 20px;
+          background: #17c0c0;
+        }
+
+        .navbar-nav .nav-item {
+          margin: 10px 0;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 995px) {
+        .navbar-nav {
+          flex-direction: column;
+          margin-top: 20px;
+          background: #17c0c0;
+        }
+
+        .navbar-nav .nav-item {
+          margin: 10px 0;
+          text-align: center;
+        }
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: auto;
+      }
+
+      .our-story {
+        text-align: center;
+        color: #070b11;
+        font-family: monospace;
+      }
+
+      .our-story img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .our-story p {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 18px;
+      }
+
+      .our-team {
+        text-align: center;
+        margin-top: 40px;
+        position: relative;
+      }
+
+      .member {
+        display: inline-block;
+        margin: 0 30px;
+        vertical-align: top;
+        width: 180px;
+        position: relative;
+      }
+
+      .member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid #090b0c;
+      }
+
+      .member .name {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .member .responsibility {
+        font-size: 14px;
+        color: #6c757d;
+      }
+
+      .connect-line {
+        position: absolute;
+        left: 50%;
+        width: 2px;
+        background-color: #01070d;
+        z-index: -1;
+        height: calc(100% - 150px);
+      }
+
+      .connect-line::before {
+        content: "";
+        position: absolute;
+        top: 150px;
+        left: -50%;
+        width: 100%;
+        border-top: 2px dashed #007bff;
+      }
+
+      .connect-line:first-child::before {
+        display: none;
+      }
+
+      .connect-icons {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .connect-icons a {
+        margin: 0 10px;
+        font-size: 24px;
+        color: #007bff;
+      }
+
+      @media (max-width: 768px) {
+        .member {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        .connect-line {
+          display: none;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .our-story img {
+          margin-bottom: 10px;
+          position: relative;
+          z-index: 1;
+        }
+        .our-story p {
+          font-size: 16px;
+          position: relative;
+          z-index: 1;
+        }
+        .member img {
+          width: 120px;
+          height: 120px;
+        }
+        .member {
+          width: calc(50% - 20px);
+          margin: 0 10px 30px;
+        }
+        .connect-line {
+          display: none;
+        }
+      }
+
+      @media (max-width: 955px) {
+        .member {
+          width: calc(33.33% - 20px);
+          margin: 0 10px 30px;
+        }
+      }
+
+      .content {
+        margin-top: 120px; /* Adjust based on the height of your fixed header */
+      }
+
+      .navbar-logo {
+        padding: 15px;
+        color: #fff;
+        font-size: 1.5rem; /* Adjust font size for branding */
+      }
+
+      .navbar-toggler {
+        border: none; /* Remove border from the toggler */
+      }
+
+      .navbar-nav {
+        margin-left: auto; /* Align nav items to the right */
+        display: flex;
+        align-items: center; /* Center items vertically */
+      }
+
+      .navbar-nav .nav-item {
+        margin: 0 10px;
+      }
+
+      .nav-item {
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="#"
+          ><i class="fas fa-info-circle"></i>&nbsp; About Us</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                ><i class="fas fa-home"></i>Home Page</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resources.html"
+                ><i class="fas fa-book"></i>Learning Resources</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="college.html"
+                ><i class="fas fa-university"></i>College Preparation</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="showcase.html"
+                ><i class="fas fa-lightbulb"></i>Student Creativity Showcase</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="community.html"
+                ><i class="fas fa-users"></i>Community Collaboration</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="btnlogin" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="our-story" class="section bg-light">
+      <div class="container">
+        <div class="our-story">
+          <h2
+            class="text-center"
+            style="color: #0a0c0f"
+            style="font-family: monospace"
+          >
+            Our Story
+          </h2>
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img
+                src="./assets/story1.png"
+                alt="Story Image"
+                class="img-fluid rounded mb-3"
+              />
+              <p>
+                We are the Student Committee Board of Academy Federal School. We
+                are a group of students who work together to make our school a
+                fun and friendly place.
+              </p>
+            </div>
+            <div class="col-md-4 text-center">
+              <img
+                src="./assets/story2.png"
+                alt="Story Image"
+                class="img-fluid rounded mb-3"
+              />
+              <p>
+                Our group started in 2024, June. Since then, we have been
+                helping to make our school better every day.
+              </p>
+            </div>
+            <div class="col-md-4 text-center">
+              <img
+                src="./assets/story3.png"
+                alt="Story Image"
+                class="img-fluid rounded mb-3"
+              />
+              <p>
+                We started the Student Committee Board because we wanted to help
+                students share their ideas and make our school even better.
+              </p>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-6 text-center">
+              <img
+                src="./assets/story4.png"
+                alt="Story Image"
+                class="img-fluid rounded mb-3"
+              />
+              <p>
+                We plan fun events, help our classmates, and talk to teachers
+                about what students need and want. Our job is to make school a
+                great place for everyone.
+              </p>
+            </div>
+            <div class="col-md-6 text-center">
+              <img
+                src="./assets/story5.png"
+                alt="Story Image"
+                class="img-fluid rounded mb-3"
+              />
+              <p>
+                You can find us at our school, Academy Federal School. Since our
+                school is online school, we don't have an office where you can
+                come and talk to us anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="our-team" class="section">
+      <div class="container">
+        <h2 class="text-center">Our Team</h2>
+        <div class="our-team">
+          <div class="member" id="nkz">
+            <img src="./assets/nkz.png" alt="NKZ" />
+            <div class="name">Sir NKZ</div>
+            <div class="responsibility">ICT Department Head</div>
+            <div class="connect-line"></div>
+          </div>
+          <div class="member" id="michi">
+            <img src="./assets/michi.png" alt="Michi Torea" />
+            <div class="name">Tr. Michi Torea</div>
+            <div class="responsibility">ICT Instructor</div>
+            <div class="connect-line"></div>
+          </div>
+          <div class="member" id="developer">
+            <img src="./assets/developer.png" alt="Developer" />
+            <div class="name">202204450</div>
+            <div class="responsibility">Developer</div>
+          </div>
+          <div class="member" id="treasurer">
+            <img src="./assets/treasurer.png" alt="Treasurer" />
+            <div class="name">202204342</div>
+            <div class="responsibility">Treasurer</div>
+          </div>
+          <div class="member" id="pr-officer">
+            <img src="./assets/profficer.png" alt="PR Officer" />
+            <div class="name">202204336</div>
+            <div class="responsibility">PR Officer</div>
+          </div>
+          <div class="member" id="researcher">
+            <img src="./assets/researcher.png" alt="Researcher" />
+            <div class="name">202204456</div>
+            <div class="responsibility">Researcher</div>
+          </div>
+          <div class="member" id="media-officer">
+            <img src="./assets/media.png" alt="Media Officer" />
+            <div class="name">2023001566</div>
+            <div class="responsibility">Media Officer</div>
+          </div>
+          <div class="member" id="technology-officer">
+            <img src="./assets/technology.png" alt="Technology Officer" />
+            <div class="name">202207864</div>
+            <div class="responsibility">Technology Officer</div>
+          </div>
+          <div class="member" id="community-outreach">
+            <img
+              src="./assets/comunityoo.png"
+              alt="Community Outreach Officer"
+            />
+            <div class="name">202204415</div>
+            <div class="responsibility">Community Outreach Officer</div>
+          </div>
+          <div class="member" id="content-manager">
+            <img src="./assets/contentmgr.png" alt="Content Manager" />
+            <div class="name">202204427</div>
+            <div class="responsibility">Content Manager</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-us" class="section">
+      <div class="container">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="connect-icons">
+          <a href="https://www.facebook.com/academyfederalschool"
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+          <a
+            href="https://youtube.com/@academyfederalschool5350?si=2EE4vGDsS4E1Yy46"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="https://t.me/academyfederalschool"
+            ><i class="fab fa-telegram"></i
+          ></a>
+          <a href="https://www.academyfs.org"><i class="fas fa-globe"></i></a>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="aboutus.js"></script>
+</html>

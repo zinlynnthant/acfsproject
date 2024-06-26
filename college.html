@@ -1,0 +1,171 @@
+<style>
+  /* Search container styles */
+  .search-container {
+    background-color: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+  }
+
+  /* Search bar styles */
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .search-bar input {
+    width: 400px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .search-bar button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  .search-bar button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Filter options styles */
+  .filter-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .filter-options label {
+    display: flex;
+    align-items: center;
+    margin: 0 10px 10px 0;
+    font-size: 14px;
+  }
+
+  .filter-options input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  /* Search results styles */
+  .search-results {
+    padding: 40px;
+  }
+
+  .college-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .college-list li {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .college-list h4 {
+    margin-top: 0;
+  }
+
+  .college-list .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .college-list .btn:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<section id="college-exploration">
+  <h2>College Exploration</h2>
+  <div class="search-container">
+    <h3>Find Your Best-Fit College</h3>
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search by school name, location, or program"
+      />
+      <button>Search</button>
+    </div>
+    <div class="search-filters">
+      <h4>Refine Your Search</h4>
+      <div class="filter-options">
+        <label>
+          <input type="checkbox" name="filter-location" value="on" />
+          Location
+        </label>
+        <label>
+          <input type="checkbox" name="filter-size" value="on" />
+          School Size
+        </label>
+        <label>
+          <input type="checkbox" name="filter-programs" value="on" />
+          Academic Programs
+        </label>
+        <label>
+          <input type="checkbox" name="filter-campus-life" value="on" />
+          Campus Life
+        </label>
+        <label>
+          <input type="checkbox" name="filter-admissions" value="on" />
+          Admissions Criteria
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="search-results">
+    <h3>Explore College Options</h3>
+    <ul class="college-list">
+      <!-- College search results will be displayed here -->
+      <li>
+        <h4>University of California, Los Angeles (UCLA)</h4>
+        <p>Los Angeles, CA</p>
+        <p>Undergraduate Enrollment: 31,600</p>
+        <p>Programs: Business, Engineering, Humanities, Sciences</p>
+        <a href="#" class="btn">Learn More</a>
+      </li>
+      <li>
+        <h4>Massachusetts Institute of Technology (MIT)</h4>
+        <p>Cambridge, MA</p>
+        <p>Undergraduate Enrollment: 4,530</p>
+        <p>Programs: Engineering, Sciences, Architecture, Business</p>
+        <a href="#" class="btn">Learn More</a>
+      </li>
+      <!-- Add more college search results -->
+    </ul>
+    <a href="#" class="btn">View More Colleges</a>
+  </div>
+</section>
+
+<script>
+  // Focus the search input on page load
+  window.addEventListener("load", () => {
+    const searchInput = document.querySelector(".search-bar input");
+    searchInput.focus();
+  });
+
+  // Expand/collapse filter options on button click
+  const filterButton = document.querySelector(".search-filters h4");
+  const filterOptions = document.querySelector(".filter-options");
+
+  
+</script>

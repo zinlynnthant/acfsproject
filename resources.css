@@ -1,0 +1,205 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  margin: 0;
+}
+header {
+  background-color: #4a90e2; /* Vivid blue */
+  color: #fff;
+  padding: 10px 20px;
+  height: 100px;
+}
+section {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: brown;
+}
+
+.grade-dropdown,
+.ged-dropdown,
+.supplemental-dropdown {
+  margin-bottom: 15px;
+}
+
+.dropdown-btn {
+  background-color: #1491ba;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content ul li {
+  padding: 8px 0;
+}
+
+.dropdown-content ul li a {
+  color: #0bb470;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content ul li a:hover {
+  text-decoration: underline;
+}
+
+.show {
+  display: block;
+}
+
+#pdf-viewer,
+#audio-player {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#pdf-viewer h2,
+#audio-player h2 {
+  color: #0a799e; /* Pale blue color */
+}
+button {
+  background-color: #1793bc; /* Pale blue color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+header {
+  background-color: #4a90e2; /* Vivid blue */
+  color: #fff;
+  padding: 10px 20px;
+  height: 100px;
+  position: fixed; /* Make header fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure header is above other elements */
+}
+
+.navbar-logo {
+  color: white;
+  font-weight: bold;
+  font: 200;
+  text-align: center;
+}
+.nav-link {
+  color: white !important;
+  margin-right: 10px;
+}
+
+.btnlogin:hover {
+  text-decoration: none;
+  color: white;
+}
+.btnlogin {
+  background-color: #071246; /* Blue background */
+  color: #fff; /* White text */
+  border-radius: 10%; /* Circular border radius */
+  padding: 10px 20px; /* Adjust padding as needed */
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 20px;
+    background: #17c0c0;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 955px) {
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 20px;
+    background: #17c0c0;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 995px) {
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 20px;
+    background: #17c0c0;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+.navbar-logo {
+  padding: 15px;
+  color: #fff;
+  font-size: 1.5rem; /* Adjust font size for branding */
+}
+
+.navbar-toggler {
+  border: none; /* Remove border from the toggler */
+}
+
+.navbar-nav {
+  margin-left: auto; /* Align nav items to the right */
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 10px;
+}
+
+.nav-item {
+  padding-bottom: 10px;
+}
+
+#curriculum {
+  margin-top: 100px;
+}
